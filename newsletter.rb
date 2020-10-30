@@ -3,17 +3,16 @@ require 'pry'
 #########################
 # Data for the newsletter
 #########################
-require "pry"
-CAMPUS = {
+campus = {
   "name": "DC",
   "address": "1440 G St NW, Washington, DC 20005",
 }
-DATE = "Nov 20, 2019"
+date = "Nov 20, 2019"
 
-SUBSCRIBERS = ["rhona@grimes.info", "cedricschmidt@robel.io", "edmond@ko.org", "bryant@cummingsfisher.biz", "alverta@bernhard.name"]
-UNSUBSCRIBED = ["cedricschmidt@robel.io", "alverta@bernhard.name"]
+subscribers = ["rhona@grimes.info", "cedricschmidt@robel.io", "edmond@ko.org", "bryant@cummingsfisher.biz", "alverta@bernhard.name"]
+unsubscribed = ["cedricschmidt@robel.io", "alverta@bernhard.name"]
 
-ARTICLES = [
+articles = [
   {"author": "Destiny Blanda Bruen II", "title": "Mining", "text": "The orthogonal features, when combined, can explode into complexity."},
   {"author": "Robin Flatley Hilpert", "title": "Retail", "text": "In our daily lives as programmers, we process text strings a lot. So I tried to work hard on text processing, namely the string class and regular expressions. Regular expressions are built into the language and are very tuned up for use."},
   {"author": "Olevia Torphy Kuvalis", "title": "Technology", "text": "Imagine you are writing an email. You are in front of the computer. You are operating the computer, clicking a mouse and typing on a keyboard, but the message will be sent to a human over the internet. So you are working before the computer, but with a human behind the computer."},
@@ -32,8 +31,8 @@ def calculate_recipients
   # write a method that will return an array of only the subscribers who haven't unsubscribed
 end
 
-def first_n_articles(number_of_articles
-  ARTICLES.first(number_of_articles)
+def first_n_articles(number_of_articles)
+  articles.first(number_of_articles)
 end
 
 def print_recipients
@@ -79,8 +78,7 @@ def print_newsletter(number)
   articles = first_n_articles(number)
   print_many_articles(articles)
   puts format_footer(CAMPUS)
-
-  end
+  
 end
 
 def run
